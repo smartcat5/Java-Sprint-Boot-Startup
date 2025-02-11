@@ -1,9 +1,5 @@
 
 ![RealWorld example apps cover](./doc/image/realworld-cover.png)
-[![Build](https://github.com/raeperd/realworld-springboot-java/actions/workflows/build.yml/badge.svg)](https://github.com/raeperd/realworld-springboot-java/actions/workflows/build.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-[ReadWorld.io](https://github.com/gothinkster/realworld) backend project using spring boot java using `spring-security`, `spring-data-jpa`
 
  # Getting started
 
@@ -11,15 +7,6 @@
  ``` shell
  $ ./gradlew build bootRun
  ```
-
- ## Using docker
- ``` shell
- $ docker run --rm -p 8080:8080 ghcr.io/raeperd/realworld-spring-boot-java:master
- ```
-
-- Dockerhub registry is [here](https://hub.docker.com/repository/docker/raeperd/realworld-spring-boot-java)  
-- Container tags are simply branch name of this repository following git-flow strategy
-
 
 
 ## How to test 
@@ -36,11 +23,8 @@ $ ./doc/run-api-tests.sh
 
 Import [`./doc/Conduit.postman_collection.json`](./doc/Conduit.postman_collection.json) in your postman application 
 
-
-
 And also, pure `gradle test` covers almost every line of code.
 
-More details can be found in [`./doc/README.md`](./doc/README.md) and  [original source](https://github.com/gothinkster/realworld/tree/master/spec)
 
 # Overview
 
@@ -53,7 +37,7 @@ More details can be found in [`./doc/README.md`](./doc/README.md) and  [original
   - This is validated by [jacoco-gradle-plugin](https://docs.gradle.org/current/userguide/jacoco_plugin.html).
   - Coverage verification in [`./test.gradle`](./test.gradle)
 - Try to avoid including additional dependencies as much as possible
-  - Implements JWT generation / validation logic without 3rd party library [#3](https://github.com/raeperd/realworld-springboot-java/issues/3)
+  - Implements JWT generation / validation logic without 3rd party library
 - Try to maintain codes in domain package remain POJO
   - Except for special spring annotations like `@Service`, `@Repository`, `@Transactional`
   - Prohibit use of lombok in domain package
@@ -98,13 +82,6 @@ More details can be found in [`./doc/README.md`](./doc/README.md) and  [original
 - User class doing so many things now. It can be improved someway.
 - Service classes can be divided into smaller services
 - Test cases order can be improved
-
-# Contact
-
-You can contact me with [email](raeperd117@gmail.com) or issue in this project
-
-# License
-[MIT License](./LICENSE)
 
 # Referenced
 
